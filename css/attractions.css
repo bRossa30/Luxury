@@ -1,0 +1,26 @@
+.attractions {
+	background: #F5F5F5;
+}
+
+.attractions img {
+	width: 100%;
+}
+
+img.icon {
+	border: 2px solid #F4B400;
+	width: 55px;
+	height: 55px;
+	padding: 10px; 
+	float: right;
+}
+
+.attractions-desc p {
+	margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+	.col-0-padding {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

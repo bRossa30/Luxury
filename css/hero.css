@@ -1,0 +1,64 @@
+.hero {
+	height: 100vh;
+	position: relative;
+}
+
+.hero-bcg {
+	height: 100vh;
+	background: url('https://images.pexels.com/photos/919/night-dark-hotel-luxury.jpg?w=940&h=650&auto=compress&cs=tinysrgb') 0/cover no-repeat;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-ms-filter: blur(2px);
+	overflow: hidden;
+	transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	-ms-transform: scale(1.03);
+}
+
+.hero-description {
+	position: absolute;
+	top: 25vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 80%;
+	margin: 0 auto;
+	color: #F7F7F7;
+}
+
+.hero-description h1,
+.hero-description h2 {
+ 	text-shadow: 2px 2px 5px #140907;
+ }
+
+.hero-description .button {
+	display: block;
+	color: #D7D7D9;
+	height: 50px;
+	line-height: 50px;
+	width: 220px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	background: #140907;
+}
+
+.hero-description .button:hover {
+	background: #F4B400;
+	color: #140907;
+	box-shadow: 2px 2px 5px #140907;
+}
+
+@media (max-width: 768px) {
+	.hero-description {
+		top: 10vh;
+		max-width: 100%;
+	}
+
+	.hero-description h1 {
+		font-size: 3.25rem;
+	}
+
+	.hero-description h2 {
+		font-size: 2.25rem;
+}

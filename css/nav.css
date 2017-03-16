@@ -1,0 +1,103 @@
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: #E6E6E6;
+	margin-top: 20px;
+	z-index: 100;
+}
+
+nav {
+	line-height: 50px;
+}
+
+.logo {
+	float: left;
+	color: #F4B400;
+}
+
+.logo p,
+.logo i {
+	display: inline-block;
+	font-size: 1.5rem;
+}
+
+.logo p {
+	font-family: 'Coda', sans-serif;
+	margin-left: 10px;
+}
+
+.main-menu {
+	float: right;
+}
+
+.main-menu li {
+	display: inline-block;
+}
+
+nav a {
+	display: block;
+	color: inherit;
+	text-transform: uppercase;
+	padding: 0 50px;
+}
+
+nav li:hover,
+nav li:active,
+nav li:focus {
+	background: #F4B400;
+	color: #140907;
+	transition: .3s;
+}
+
+@media (max-width: 1200px) {
+	.logo {
+		margin-left: 20px;
+	}
+
+	nav ul {
+		padding-right: 30px;
+	}
+
+	nav a {
+		padding: 0 25px;
+	}
+}
+
+@media (max-width: 840px) {
+	nav a {
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	
+	header {
+		position: static;
+		background: #1C1C1C;
+		margin: 0 
+	}
+
+	.logo {
+		padding-top: 15px;
+	}
+
+	.main-menu {
+		margin-bottom: 0;
+	}
+	
+	.logo,
+	.main-menu {
+		float: none;
+		text-align: center;
+	}
+
+	.main-menu li {
+		display: block;
+	}
+
+	nav ul {
+		padding-right: 0;
+	}
+}

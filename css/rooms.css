@@ -1,0 +1,151 @@
+.rooms-photo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.rooms-photo {
+	position: relative;
+	cursor: pointer;
+}
+
+.rooms-description {
+	padding: 10px 30px;
+	font-size: 1.5rem;
+	background: rgba(0, 0, 0, .8);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	z-index: 100;
+	transition: .5s;
+}
+
+.rooms-description h4, 
+.rooms-description p {
+	display: inline-block;
+	margin: 0;
+}
+
+.rooms-description h4 {
+	color: #E6E6E6;
+	text-transform: uppercase;
+}
+
+.rooms-description p {
+	float: right;
+	color: #F4B400;
+}
+
+.rooms-description strike {
+	color: #757575;
+	font-size: .75rem;
+	margin-right: 5px;
+
+}
+
+@media (min-width: 768px) {
+	.rooms-desc-hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		opacity: 0;
+		transition: .5s;
+		color: #E6E6E6;
+		z-index: 99;
+		text-align: center;
+	} 
+
+	.rooms-desc-hover .button-sm {
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+	}
+
+	.rooms-photo:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 7px);
+		background: rgba(0, 0, 0, .5);
+		opacity: 0;
+		transition: .5s;
+	}
+
+	.rooms-photo:hover .rooms-desc-hover {
+		opacity: 1;
+		top: 60px;
+		
+	}
+
+	.rooms-photo:hover .rooms-description {
+		opacity: 0;
+		transform: translateY(-30%);
+		-webkit-transform: translateY(-30%);
+		-ms-transform: translateY(-30%);
+	}
+
+	.rooms-photo:hover:after{
+		opacity: 1;
+	}
+
+	.rooms-photo:hover .button-sm {
+		transform: scale(1) ;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		
+	}
+
+	.rooms-photo:hover .button-sm:first-of-type {
+		transition: transform .3s .3s, background .3s;
+	}
+
+
+	.rooms-photo:hover .button-sm:last-of-type {
+		transition: transform .3s .6s, background .3s;
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.rooms-desc-hover p {
+		font-size: .9rem;	
+	}
+
+	.rooms-photo:hover .rooms-desc-hover {
+		top: 5%;
+	}
+
+	.rooms-desc-hover .button:first-of-type {
+		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 992px) {
+	.rooms-desc-hover p {
+		font-size: 1rem;	
+	}
+
+	.rooms-photo:hover .rooms-desc-hover {
+		top: 60px;
+	}
+}
+
+@media (max-width: 767px) {
+	.rooms-description {
+		bottom: 150px;
+	}
+
+	.rooms-desc-hover {
+		text-align: center;
+		position: relative;
+	}
+
+	.rooms-photo:hover .rooms-desc-hover {
+		top: 0;
+		cursor: default;
+	}
+}
